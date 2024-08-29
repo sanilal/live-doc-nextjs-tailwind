@@ -1,9 +1,14 @@
 import { Editor } from '@/components/editor/Editor'
-import React from 'react'
+import Header from '@/components/Header'
 
 const Document = () => {
   return (
-    <div><Editor /></div>
+    <div>
+      <Header>
+        <p className='text-white'>Test</p>
+      </Header>
+      <Editor />
+      </div>
   )
 }
 
