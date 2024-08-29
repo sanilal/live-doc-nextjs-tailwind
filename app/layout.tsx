@@ -4,6 +4,7 @@ import './globals.css'
 
 import { cn } from "@/lib/utils"
 import { Metadata } from "next"
+import { ClerkProvider } from "@clerk/nextjs"
 
 
 const fontSans = FontSans({
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
+    <ClerkProvider>
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
@@ -28,5 +30,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {children}
       </body>
     </html>
+    </ClerkProvider>
   )
 }
